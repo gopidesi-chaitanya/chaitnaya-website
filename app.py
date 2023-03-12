@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import *
 
 app=Flask(__name__)
 
 @app.route('/')
 def home():
-  return '<h1> hello chaitanya</h1>'
+  return render_template('home.html')
 
 app.run(host='0.0.0.0',debug=True)
